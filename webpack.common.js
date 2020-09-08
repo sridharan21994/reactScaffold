@@ -7,7 +7,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].bundle.js'
   },
   mode:'development',
   devServer: {
@@ -30,7 +30,8 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'React App',
-      template: './public/index.html'
+      template: './public/index.html',
+      favicon: './public/favicon.ico'
     })
   ]
 };
